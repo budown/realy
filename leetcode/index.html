@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LeetCode Hot100 | 东寨村</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="东寨村">
+    
+    <link rel="preload" href="/realy/assets/css/0.styles.71210001.css" as="style"><link rel="preload" href="/realy/assets/js/app.ba13e064.js" as="script"><link rel="preload" href="/realy/assets/js/2.6b092d03.js" as="script"><link rel="preload" href="/realy/assets/js/10.023283f4.js" as="script"><link rel="prefetch" href="/realy/assets/js/3.bb5f88a2.js"><link rel="prefetch" href="/realy/assets/js/4.fca4814b.js"><link rel="prefetch" href="/realy/assets/js/5.925cb319.js"><link rel="prefetch" href="/realy/assets/js/6.4e53a11e.js"><link rel="prefetch" href="/realy/assets/js/7.be402676.js"><link rel="prefetch" href="/realy/assets/js/8.f3ce7b9b.js"><link rel="prefetch" href="/realy/assets/js/9.5895d2b1.js">
+    <link rel="stylesheet" href="/realy/assets/css/0.styles.71210001.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/realy/" class="home-link router-link-active"><!----> <span class="site-name">东寨村</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/realy/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/realy/basic/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/realy/leetcode/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  LeetCode
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/realy/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/realy/basic/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/realy/leetcode/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  LeetCode
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>LeetCode Hot100</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/realy/leetcode/#链表" class="sidebar-link">链表</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/realy/leetcode/#_2-两数相加" class="sidebar-link">2. 两数相加</a></li><li class="sidebar-sub-header"><a href="/realy/leetcode/#_19-删除链表的倒数第-n-个结点" class="sidebar-link">19. 删除链表的倒数第 N 个结点</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="leetcode-hot100"><a href="#leetcode-hot100" class="header-anchor">#</a> LeetCode Hot100</h1> <h2 id="链表"><a href="#链表" class="header-anchor">#</a> 链表</h2> <h3 id="_2-两数相加"><a href="#_2-两数相加" class="header-anchor">#</a> 2. 两数相加</h3> <ul><li>题目描述</li></ul> <p>给你两个非空的链表，表示两个整数并且两个整数是逆序的，将两个整数求和，并返回求和后的链表</p> <ul><li>示例</li></ul> <div class="language-txt extra-class"><pre class="language-txt"><code>输入：243，564
+输出：708
+解释：342 + 465 = 807
+</code></pre></div><ul><li>思路</li></ul> <ol><li>新构建一个链表用来存放相加的结果，初始化一个进位变量为 0</li> <li>遍历两个链表，计算当前节点的和，并且加上进位，并且更新进位（条件是大于10）</li></ol> <ul><li>代码</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">ListNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">next</span><span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token builtin">next</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">addTwoNumbers</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 定义一个新的链表</span>
+        dummy_head <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+        cur <span class="token operator">=</span> dummy_head
+        <span class="token comment"># 进位</span>
+        carry <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token comment"># l1 或者 l2 都不为空，进入循环</span>
+        <span class="token keyword">while</span> l1 <span class="token keyword">or</span> l2<span class="token punctuation">:</span>
+            x <span class="token operator">=</span> l1<span class="token punctuation">.</span>val <span class="token keyword">if</span> l1 <span class="token keyword">else</span> <span class="token number">0</span>
+            y <span class="token operator">=</span> l2<span class="token punctuation">.</span>val <span class="token keyword">if</span> l2 <span class="token keyword">else</span> <span class="token number">0</span>
+            <span class="token comment"># 两个链表的值相加，并且加上进位</span>
+            total <span class="token operator">=</span> x <span class="token operator">+</span> y <span class="token operator">+</span> carry
+            <span class="token comment"># 计算进位</span>
+            carry <span class="token operator">=</span> total <span class="token operator">//</span> <span class="token number">10</span>
+            <span class="token comment"># 链表新的节点赋值</span>
+            cur<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>total <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">)</span>
+            <span class="token comment"># 链接后移，往后走</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span>
+
+            <span class="token keyword">if</span> l1<span class="token punctuation">:</span>
+                l1 <span class="token operator">=</span> l1<span class="token punctuation">.</span><span class="token builtin">next</span>
+            <span class="token keyword">if</span> l2<span class="token punctuation">:</span>
+                l2 <span class="token operator">=</span> l2<span class="token punctuation">.</span><span class="token builtin">next</span>
+        <span class="token keyword">if</span> carry <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            cur<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>carry<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> dummy_head<span class="token punctuation">.</span><span class="token builtin">next</span>
+</code></pre></div><h3 id="_19-删除链表的倒数第-n-个结点"><a href="#_19-删除链表的倒数第-n-个结点" class="header-anchor">#</a> 19. 删除链表的倒数第 N 个结点</h3> <ul><li>题目描述</li></ul> <p>给出一个链表，删除链表的倒数第 N 个节点</p> <ul><li>示例</li></ul> <div class="language-txt extra-class"><pre class="language-txt"><code>输入：head = [1,2,3,4,5], n = 2
+输出：[1,2,3,5]
+
+</code></pre></div><ul><li>思路</li></ul> <ol><li>如果知道链表的长度 L ，那么要删除的节点就是 L - n + 1</li> <li>所以第一遍遍历计算出长度</li> <li>第二遍遍历走到 L - n + 1 时，将 next 指针指到下一位就好了</li></ol> <ul><li>代码</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">ListNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">next</span><span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token builtin">next</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">removeNthFromEnd</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> ListNode<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">get_length</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            length <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">while</span> head<span class="token punctuation">:</span>
+                length <span class="token operator">+=</span> <span class="token number">1</span>
+                head <span class="token operator">=</span> head<span class="token punctuation">.</span><span class="token builtin">next</span>
+            <span class="token keyword">return</span> length
+
+        dummy <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> head<span class="token punctuation">)</span>
+        length <span class="token operator">=</span> get_length<span class="token punctuation">(</span>head<span class="token punctuation">)</span>
+
+        cur <span class="token operator">=</span> dummy
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> length <span class="token operator">-</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span>
+        cur<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+        <span class="token keyword">return</span> dummy<span class="token punctuation">.</span><span class="token builtin">next</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/realy/assets/js/app.ba13e064.js" defer></script><script src="/realy/assets/js/2.6b092d03.js" defer></script><script src="/realy/assets/js/10.023283f4.js" defer></script>
+  </body>
+</html>

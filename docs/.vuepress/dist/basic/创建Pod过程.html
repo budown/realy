@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>create pod | 东寨村</title>
+    <title>创建 Pod 过程 | 东寨村</title>
     <meta name="generator" content="VuePress 1.9.9">
     
     <meta name="description" content="东寨村">
     
-    <link rel="preload" href="/realy/assets/css/0.styles.71210001.css" as="style"><link rel="preload" href="/realy/assets/js/app.d62443fb.js" as="script"><link rel="preload" href="/realy/assets/js/2.6b092d03.js" as="script"><link rel="preload" href="/realy/assets/js/9.9f7ffcfd.js" as="script"><link rel="prefetch" href="/realy/assets/js/10.731a40d5.js"><link rel="prefetch" href="/realy/assets/js/11.1fefacd5.js"><link rel="prefetch" href="/realy/assets/js/12.ed463804.js"><link rel="prefetch" href="/realy/assets/js/13.b4dc6aa6.js"><link rel="prefetch" href="/realy/assets/js/14.42d0cdf3.js"><link rel="prefetch" href="/realy/assets/js/15.5cc8eccc.js"><link rel="prefetch" href="/realy/assets/js/16.63a541a3.js"><link rel="prefetch" href="/realy/assets/js/3.68be7fcc.js"><link rel="prefetch" href="/realy/assets/js/4.fca4814b.js"><link rel="prefetch" href="/realy/assets/js/5.925cb319.js"><link rel="prefetch" href="/realy/assets/js/6.4e53a11e.js"><link rel="prefetch" href="/realy/assets/js/7.df0f5163.js"><link rel="prefetch" href="/realy/assets/js/8.21c50cd4.js">
+    <link rel="preload" href="/realy/assets/css/0.styles.71210001.css" as="style"><link rel="preload" href="/realy/assets/js/app.d4d3ffe0.js" as="script"><link rel="preload" href="/realy/assets/js/2.6b092d03.js" as="script"><link rel="preload" href="/realy/assets/js/13.2464062c.js" as="script"><link rel="prefetch" href="/realy/assets/js/10.d582d11d.js"><link rel="prefetch" href="/realy/assets/js/11.49b6a5b0.js"><link rel="prefetch" href="/realy/assets/js/12.b49a9887.js"><link rel="prefetch" href="/realy/assets/js/14.181e66fb.js"><link rel="prefetch" href="/realy/assets/js/15.82823dd0.js"><link rel="prefetch" href="/realy/assets/js/16.5b88480f.js"><link rel="prefetch" href="/realy/assets/js/17.2440d410.js"><link rel="prefetch" href="/realy/assets/js/18.c93635e8.js"><link rel="prefetch" href="/realy/assets/js/19.0ce7cd60.js"><link rel="prefetch" href="/realy/assets/js/3.c6b3779b.js"><link rel="prefetch" href="/realy/assets/js/4.fca4814b.js"><link rel="prefetch" href="/realy/assets/js/5.925cb319.js"><link rel="prefetch" href="/realy/assets/js/6.4e53a11e.js"><link rel="prefetch" href="/realy/assets/js/7.974f9de8.js"><link rel="prefetch" href="/realy/assets/js/8.d075e1ee.js"><link rel="prefetch" href="/realy/assets/js/9.5c59a691.js">
     <link rel="stylesheet" href="/realy/assets/css/0.styles.71210001.css">
   </head>
   <body>
@@ -24,7 +24,7 @@
   基础
 </a></div><div class="nav-item"><a href="/realy/leetcode/" class="nav-link">
   LeetCode
-</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>create pod</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="create-pod"><a href="#create-pod" class="header-anchor">#</a> create pod</h1> <p>用户通过命令行创建Pod</p> <p>kube-apiserver经过对象校验、admission、quota等准入操作，写入etcd</p> <p>kube-apiserver将结果返回给用户
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>创建 Pod 过程</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="创建-pod-过程"><a href="#创建-pod-过程" class="header-anchor">#</a> 创建 Pod 过程</h1> <p>用户通过命令行创建Pod</p> <p>kube-apiserver经过对象校验、admission、quota等准入操作，写入etcd</p> <p>kube-apiserver将结果返回给用户
 同时kube-scheduler一直监听节点、Pod事件
 kube-scheduler将spec.nodeName的pod加入到调度队列中，进行调度周期
 kube-scheduler将pod与得分最高的节点进行binding操作
@@ -32,6 +32,6 @@ kube-apiserver将binding信息写入etcd
 kubelet监听分配给自己的Pod，调用CRI接口进行Pod创建
 kubelet创建Pod后，更新Pod状态等信息，并向kube-apiserver上报
 kube-apiserver写入数据</p> <hr> <p>kubectl</p> <p>kubectl 会执行客户端验证，以确保非法的请求（例如，创建不支持的资源或使用格式错误的镜像名称）快速失败，并不会发送给 kube-apiserver，即通过减少不必要的负载来提高系统性能</p> <p>验证通过后， Kubectl 开始构造它将发送给 kube-apiserver 的 HTTP 请求。在 Kubernetes 中，访问或更改状态的所有尝试都通过 kube-apiserver 进行，​​后者又与 etcd 进行通信。</p> <p>在发送请求之前， Kubectl 需要先进行身份验证。用户凭据一般存储在 kubeconfig 文件中，比如 ~/.kube/config</p> <p>最后一步发送 HTTP 请求</p> <p>kube-apiserver</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/realy/assets/js/app.d62443fb.js" defer></script><script src="/realy/assets/js/2.6b092d03.js" defer></script><script src="/realy/assets/js/9.9f7ffcfd.js" defer></script>
+    <script src="/realy/assets/js/app.d4d3ffe0.js" defer></script><script src="/realy/assets/js/2.6b092d03.js" defer></script><script src="/realy/assets/js/13.2464062c.js" defer></script>
   </body>
 </html>

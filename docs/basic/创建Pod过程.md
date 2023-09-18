@@ -1,4 +1,4 @@
-# create pod
+# 创建 Pod 过程
 
 用户通过命令行创建Pod
 

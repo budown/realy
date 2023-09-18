@@ -8,7 +8,7 @@
     
     <meta name="description" content="东寨村">
     
-    <link rel="preload" href="/realy/assets/css/0.styles.71210001.css" as="style"><link rel="preload" href="/realy/assets/js/app.d62443fb.js" as="script"><link rel="preload" href="/realy/assets/js/2.6b092d03.js" as="script"><link rel="preload" href="/realy/assets/js/11.1fefacd5.js" as="script"><link rel="prefetch" href="/realy/assets/js/10.731a40d5.js"><link rel="prefetch" href="/realy/assets/js/12.ed463804.js"><link rel="prefetch" href="/realy/assets/js/13.b4dc6aa6.js"><link rel="prefetch" href="/realy/assets/js/14.42d0cdf3.js"><link rel="prefetch" href="/realy/assets/js/15.5cc8eccc.js"><link rel="prefetch" href="/realy/assets/js/16.63a541a3.js"><link rel="prefetch" href="/realy/assets/js/3.68be7fcc.js"><link rel="prefetch" href="/realy/assets/js/4.fca4814b.js"><link rel="prefetch" href="/realy/assets/js/5.925cb319.js"><link rel="prefetch" href="/realy/assets/js/6.4e53a11e.js"><link rel="prefetch" href="/realy/assets/js/7.df0f5163.js"><link rel="prefetch" href="/realy/assets/js/8.21c50cd4.js"><link rel="prefetch" href="/realy/assets/js/9.9f7ffcfd.js">
+    <link rel="preload" href="/realy/assets/css/0.styles.71210001.css" as="style"><link rel="preload" href="/realy/assets/js/app.d4d3ffe0.js" as="script"><link rel="preload" href="/realy/assets/js/2.6b092d03.js" as="script"><link rel="preload" href="/realy/assets/js/10.d582d11d.js" as="script"><link rel="prefetch" href="/realy/assets/js/11.49b6a5b0.js"><link rel="prefetch" href="/realy/assets/js/12.b49a9887.js"><link rel="prefetch" href="/realy/assets/js/13.2464062c.js"><link rel="prefetch" href="/realy/assets/js/14.181e66fb.js"><link rel="prefetch" href="/realy/assets/js/15.82823dd0.js"><link rel="prefetch" href="/realy/assets/js/16.5b88480f.js"><link rel="prefetch" href="/realy/assets/js/17.2440d410.js"><link rel="prefetch" href="/realy/assets/js/18.c93635e8.js"><link rel="prefetch" href="/realy/assets/js/19.0ce7cd60.js"><link rel="prefetch" href="/realy/assets/js/3.c6b3779b.js"><link rel="prefetch" href="/realy/assets/js/4.fca4814b.js"><link rel="prefetch" href="/realy/assets/js/5.925cb319.js"><link rel="prefetch" href="/realy/assets/js/6.4e53a11e.js"><link rel="prefetch" href="/realy/assets/js/7.974f9de8.js"><link rel="prefetch" href="/realy/assets/js/8.d075e1ee.js"><link rel="prefetch" href="/realy/assets/js/9.5c59a691.js">
     <link rel="stylesheet" href="/realy/assets/css/0.styles.71210001.css">
   </head>
   <body>
@@ -24,9 +24,7 @@
   基础
 </a></div><div class="nav-item"><a href="/realy/leetcode/" class="nav-link">
   LeetCode
-</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux 基础</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux-基础"><a href="#linux-基础" class="header-anchor">#</a> Linux 基础</h1> <p>时间</p> <p>一个文件的关于时间的信息，有三个：</p> <p>最近访问时间 -atime 代表着最近一次访问文件的时间
-最近修改时间 -mtime 代表着最近一次文件内容被修改的时间
-最近状态修改时间 -ctime 代表着最近一次文件状态改变的时间</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">]</span><span class="token comment"># stat yum.log </span>
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux 基础</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux-基础"><a href="#linux-基础" class="header-anchor">#</a> Linux 基础</h1> <p>一个文件的关于时间的信息，有三个：</p> <ul><li>最近访问时间 -atime 代表着最近一次访问文件的时间</li> <li>最近修改时间 -mtime 代表着最近一次文件内容被修改的时间</li> <li>最近状态修改时间 -ctime 代表着最近一次文件状态改变的时间</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token punctuation">]</span><span class="token comment"># stat yum.log </span>
   File: ‘yum.log’
   Size: <span class="token number">53</span>              Blocks: <span class="token number">8</span>          IO Block: <span class="token number">4096</span>   regular <span class="token function">file</span>
 Device: fd01h/64769d    Inode: <span class="token number">396426</span>      Links: <span class="token number">1</span>
@@ -35,64 +33,7 @@ Access: <span class="token number">2023</span>-08-07 <span class="token number">
 Modify: <span class="token number">2023</span>-09-14 06:15:01.388763744 +0000
 Change: <span class="token number">2023</span>-09-14 06:15:01.388763744 +0000
  Birth: -
-</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 5天之内 更改过</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-mtime</span> <span class="token parameter variable">-5</span>
-
-<span class="token comment"># 5天之前那一天 更改过</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-mtime</span> <span class="token number">5</span>
-
-<span class="token comment"># 5天之前 更改过</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-mtime</span> +5
-
-<span class="token comment"># 60分钟以内</span>
-<span class="token function">find</span> / <span class="token parameter variable">-mmin</span> <span class="token parameter variable">-60</span> <span class="token parameter variable">-exec</span> <span class="token function">ls</span> <span class="token parameter variable">-l</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
-
-<span class="token comment"># 比某个文件新的文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-newer</span> file_name
-
-<span class="token comment"># 不比某个文件新的文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token operator">!</span> <span class="token parameter variable">-newer</span> file_name
-</code></pre></div><p>大小</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 找到文件大于 50M 并且小于 100M</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-size</span> +50M <span class="token parameter variable">-size</span> <span class="token parameter variable">-100M</span>
-
-<span class="token comment"># 0 字节的文件 也就是文件内容为空</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-empty</span>
-</code></pre></div><p>类型</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 目录类型</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> d
-
-<span class="token comment"># 文件类型</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f
-
-<span class="token comment"># 连接文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> l
-
-<span class="token comment"># socket文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> s
-</code></pre></div><p>目录</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 找目录类型文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> d <span class="token parameter variable">-print</span>
-
-<span class="token comment"># 排除 test 目录 找 log 文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-path</span> ./test <span class="token parameter variable">-prune</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">&quot;*.log&quot;</span>
-
-<span class="token comment"># 目录深度为 2 ，也就是找当前目录下，再往下的目录深度是 2 层</span>
-<span class="token function">find</span> / <span class="token parameter variable">-path</span> ./test <span class="token parameter variable">-prune</span> <span class="token parameter variable">-o</span> <span class="token parameter variable">-name</span> <span class="token string">&quot;*.log&quot;</span> <span class="token parameter variable">-maxdepth</span> <span class="token number">2</span>
-</code></pre></div><p>组合</p> <p>find [path] [args] -exec [command] {} ;</p> <p>[command] 是要执行的命令，{} 是一个占位符，是暂存了 find 命令的搜索结果</p> <p>; 是 [command] 命令的结束，在这里需要转义 ; 避免 shell 的解释，因此是固定写法</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 找文件并且列出来</span>
-<span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-exec</span> <span class="token function">ls</span> <span class="token parameter variable">-l</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
-
-<span class="token comment"># 将 .json 后缀的文件扩展为 .bak 的文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-name</span> <span class="token string">&quot;*.json&quot;</span> <span class="token parameter variable">-exec</span> <span class="token function">sh</span> <span class="token parameter variable">-c</span> <span class="token string">'mv &quot;$1&quot; &quot;${1}.bak&quot;'</span> _ <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
-<span class="token comment"># 恢复上述动作</span>
-<span class="token function">find</span> / <span class="token parameter variable">-name</span> <span class="token string">&quot;*.bak&quot;</span> <span class="token parameter variable">-exec</span> <span class="token function">sh</span> <span class="token parameter variable">-c</span> <span class="token string">'mv &quot;$1&quot; ${1%.json.bak}.json'</span> _ <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
-
-<span class="token comment"># 删除 .log 后缀的文件</span>
-<span class="token function">find</span> / <span class="token parameter variable">-name</span> <span class="token string">&quot;*.log&quot;</span> <span class="token parameter variable">-exec</span> <span class="token function">rm</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
-
-<span class="token comment"># 同样的删除</span>
-<span class="token function">find</span> / <span class="token parameter variable">-name</span> xxx.json <span class="token parameter variable">-delete</span>
-
-<span class="token comment"># 同样的删除</span>
-<span class="token function">find</span> / <span class="token parameter variable">-name</span> xxx.json <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">rm</span>
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/realy/assets/js/app.d62443fb.js" defer></script><script src="/realy/assets/js/2.6b092d03.js" defer></script><script src="/realy/assets/js/11.1fefacd5.js" defer></script>
+    <script src="/realy/assets/js/app.d4d3ffe0.js" defer></script><script src="/realy/assets/js/2.6b092d03.js" defer></script><script src="/realy/assets/js/10.d582d11d.js" defer></script>
   </body>
 </html>

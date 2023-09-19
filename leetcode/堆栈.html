@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>堆栈 | 东寨村</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="东寨村">
+    
+    <link rel="preload" href="/realy/assets/css/0.styles.71210001.css" as="style"><link rel="preload" href="/realy/assets/js/app.a349b899.js" as="script"><link rel="preload" href="/realy/assets/js/2.6b092d03.js" as="script"><link rel="preload" href="/realy/assets/js/17.5a771287.js" as="script"><link rel="prefetch" href="/realy/assets/js/10.855c67d2.js"><link rel="prefetch" href="/realy/assets/js/11.17b7bef4.js"><link rel="prefetch" href="/realy/assets/js/12.f9f019bc.js"><link rel="prefetch" href="/realy/assets/js/13.040d99f0.js"><link rel="prefetch" href="/realy/assets/js/14.6cbc151a.js"><link rel="prefetch" href="/realy/assets/js/15.47a52bed.js"><link rel="prefetch" href="/realy/assets/js/16.2a37a56f.js"><link rel="prefetch" href="/realy/assets/js/18.4c9fef21.js"><link rel="prefetch" href="/realy/assets/js/19.91919834.js"><link rel="prefetch" href="/realy/assets/js/20.2436379b.js"><link rel="prefetch" href="/realy/assets/js/3.4f37018d.js"><link rel="prefetch" href="/realy/assets/js/4.fca4814b.js"><link rel="prefetch" href="/realy/assets/js/5.925cb319.js"><link rel="prefetch" href="/realy/assets/js/6.4e53a11e.js"><link rel="prefetch" href="/realy/assets/js/7.a577d9ac.js"><link rel="prefetch" href="/realy/assets/js/8.d075e1ee.js"><link rel="prefetch" href="/realy/assets/js/9.5c59a691.js">
+    <link rel="stylesheet" href="/realy/assets/css/0.styles.71210001.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/realy/" class="home-link router-link-active"><!----> <span class="site-name">东寨村</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/realy/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/realy/basic/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/realy/leetcode/" class="nav-link router-link-active">
+  LeetCode
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/realy/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/realy/basic/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/realy/leetcode/" class="nav-link router-link-active">
+  LeetCode
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>堆栈</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/realy/leetcode/%E5%A0%86%E6%A0%88.html#_155-最小栈" class="sidebar-link">155. 最小栈</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="堆栈"><a href="#堆栈" class="header-anchor">#</a> 堆栈</h1> <h2 id="_155-最小栈"><a href="#_155-最小栈" class="header-anchor">#</a> <a href="https://leetcode.cn/problems/min-stack/" target="_blank" rel="noopener noreferrer">155. 最小栈<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h2> <ul><li>描述</li></ul> <div class="language-txt extra-class"><pre class="language-txt"><code>设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。
+
+实现 MinStack 类:
+
+MinStack() 初始化堆栈对象。
+void push(int val) 将元素val推入堆栈。
+void pop() 删除堆栈顶部的元素。
+int top() 获取堆栈顶部的元素。
+int getMin() 获取堆栈中的最小元素。
+</code></pre></div><ul><li>示例</li></ul> <div class="language-txt extra-class"><pre class="language-txt"><code>输入：
+[&quot;MinStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;getMin&quot;,&quot;pop&quot;,&quot;top&quot;,&quot;getMin&quot;]
+[[],[-2],[0],[-3],[],[],[],[]]
+
+输出：
+[null,null,null,null,-3,null,0,-2]
+
+解释：
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin();   --&gt; 返回 -3.
+minStack.pop();
+minStack.top();      --&gt; 返回 0.
+minStack.getMin();   --&gt; 返回 -2.
+</code></pre></div><ul><li>思路</li></ul> <ol><li>要求是常数时间来检索最小元素的栈，可以使用两个栈来维护，其中一个存储最小元素</li> <li>所以在入栈的时候，先要比较当前元素与栈顶元素，如果小，则放入 min_stack</li> <li>对于出栈动作，pop 出的元素与 min_stack 栈顶的比较，如果一样，则从 min_stack 也弹出栈顶元素，保持 min_stack 栈顶最小</li></ol> <ul><li>代码</li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token keyword">class</span> <span class="token class-name">MinStack</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>min_stack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">push</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>min_stack <span class="token keyword">or</span> val <span class="token operator">&lt;=</span> self<span class="token punctuation">.</span>min_stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>min_stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">pop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>stack<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> self<span class="token punctuation">.</span>min_stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>min_stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">top</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>stack<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">getMin</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>min_stack<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>min_stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/realy/assets/js/app.a349b899.js" defer></script><script src="/realy/assets/js/2.6b092d03.js" defer></script><script src="/realy/assets/js/17.5a771287.js" defer></script>
+  </body>
+</html>

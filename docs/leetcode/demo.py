@@ -37,3 +37,36 @@ class MinStack:
     def getMin(self):
         if self.min_stack:
             return self.min_stack[-1]
+
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+    def getIntersectionNode(self, headA, headB):
+        if not headA or not headB:
+            return None
+
+        p1 = headA
+        p2 = headB
+        while p1 != p2:
+            p1 = p1.next if p1 else headB
+            p2 = p2.next if p2 else headA
+        return p1
+
+
+class Solution:
+    def majorityElement(self, nums):
+        a = None
+        c = 0
+        for i in nums:
+            if c == 0:
+                a = i
+            if i == a:
+                c += 1
+            else:
+                c -= 1
+        return a

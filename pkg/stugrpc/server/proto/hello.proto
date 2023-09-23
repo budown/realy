@@ -1,0 +1,18 @@
+syntax = "proto3"; // 语法
+
+// 最后生成的 go 文件是在哪个目录哪个包中， . 代表在当前目录生成， server 代表生成的 go 文件的包名是 server
+option go_package = ".;server";
+
+
+// 定义一个服务 
+service SayHello { 
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+    string requestName = 1;
+}
+
+message HelloResponse {
+    string responseMsg = 1;
+}

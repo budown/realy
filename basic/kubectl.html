@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>kubectl 命令 | 东寨村</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="东寨村">
+    
+    <link rel="preload" href="/realy/assets/css/0.styles.e58d6802.css" as="style"><link rel="preload" href="/realy/assets/js/app.ffbae103.js" as="script"><link rel="preload" href="/realy/assets/js/2.6b092d03.js" as="script"><link rel="preload" href="/realy/assets/js/12.e5d686e8.js" as="script"><link rel="prefetch" href="/realy/assets/js/10.bc6b50aa.js"><link rel="prefetch" href="/realy/assets/js/11.db93a9af.js"><link rel="prefetch" href="/realy/assets/js/13.8ef22eb4.js"><link rel="prefetch" href="/realy/assets/js/14.ac75f979.js"><link rel="prefetch" href="/realy/assets/js/15.30701aa4.js"><link rel="prefetch" href="/realy/assets/js/16.a57bf315.js"><link rel="prefetch" href="/realy/assets/js/17.72c14497.js"><link rel="prefetch" href="/realy/assets/js/18.4e44a07c.js"><link rel="prefetch" href="/realy/assets/js/19.e9a2839e.js"><link rel="prefetch" href="/realy/assets/js/20.a8989fb1.js"><link rel="prefetch" href="/realy/assets/js/21.fab4b97f.js"><link rel="prefetch" href="/realy/assets/js/22.c2fb1f9d.js"><link rel="prefetch" href="/realy/assets/js/23.ec992185.js"><link rel="prefetch" href="/realy/assets/js/3.b3c262eb.js"><link rel="prefetch" href="/realy/assets/js/4.4669c6e2.js"><link rel="prefetch" href="/realy/assets/js/5.91c18d5d.js"><link rel="prefetch" href="/realy/assets/js/6.4e53a11e.js"><link rel="prefetch" href="/realy/assets/js/7.974f9de8.js"><link rel="prefetch" href="/realy/assets/js/8.acb01cb7.js"><link rel="prefetch" href="/realy/assets/js/9.6506b87b.js">
+    <link rel="stylesheet" href="/realy/assets/css/0.styles.e58d6802.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/realy/" class="home-link router-link-active"><!----> <span class="site-name">东寨村</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/realy/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/realy/basic/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/realy/leetcode/" class="nav-link">
+  LeetCode
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/realy/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/realy/basic/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/realy/leetcode/" class="nav-link">
+  LeetCode
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>kubectl 命令</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/realy/basic/kubectl.html#标签" class="sidebar-link">标签</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/realy/basic/kubectl.html#日志" class="sidebar-link">日志</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="kubectl-命令"><a href="#kubectl-命令" class="header-anchor">#</a> kubectl 命令</h1> <h2 id="标签"><a href="#标签" class="header-anchor">#</a> 标签</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 查看标签</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> get pod --show-labels
+
+<span class="token comment"># 查看标签为 app=nginx 的 Pod</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> get pod <span class="token parameter variable">-l</span> <span class="token assign-left variable">app</span><span class="token operator">=</span>nginx
+
+<span class="token comment"># 新增标签</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> label svc nginx <span class="token assign-left variable">app</span><span class="token operator">=</span>nginx
+
+<span class="token comment"># 更新标签</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> label svc nginx <span class="token assign-left variable">app</span><span class="token operator">=</span>nginx2 <span class="token parameter variable">--overwrite</span>
+
+<span class="token comment"># 删除标签</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> label svc nginx app-
+</code></pre></div><h2 id="日志"><a href="#日志" class="header-anchor">#</a> 日志</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 查看 Pod 中的 container</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> get pod <span class="token variable">$PodName</span> <span class="token parameter variable">-o</span> <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">'{.spec.containers[*].name}'</span>
+
+<span class="token comment"># 查看 Pod 的日志 默认是第一个 container</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> logs <span class="token variable">$PodName</span>
+
+<span class="token comment"># 查看 Pod 的日志 -f 参数类似于 tail 命令</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> logs <span class="token parameter variable">-f</span> <span class="token variable">$PodName</span>
+
+<span class="token comment"># 最近 20 条日志</span>
+kubectl <span class="token parameter variable">-n</span> <span class="token variable">$namespace</span> logs <span class="token parameter variable">-f</span> <span class="token variable">$PodName</span> <span class="token parameter variable">-c</span> <span class="token variable">$ContainerName</span> <span class="token parameter variable">--tail</span><span class="token operator">=</span><span class="token number">20</span>
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 拷贝容器文件到本地</span>
+kubectl <span class="token parameter variable">-n</span> default <span class="token function">cp</span> <span class="token variable">$PodName</span>:/etc/nginx/nginx.conf /tmp/nginx.conf
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/realy/assets/js/app.ffbae103.js" defer></script><script src="/realy/assets/js/2.6b092d03.js" defer></script><script src="/realy/assets/js/12.e5d686e8.js" defer></script>
+  </body>
+</html>

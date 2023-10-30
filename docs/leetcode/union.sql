@@ -1,0 +1,161 @@
+select
+    sum(u_money) as total_money
+from
+    (
+        select
+            u_money
+        from
+            loris_character_15010030001.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030003.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030005.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030007.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030009.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030011.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030013.recharge_record
+    ) as total_money;
+
+select
+    sum(u_money)
+from
+    loris_character_15010030001.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030003.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030005.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030007.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030009.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030011.recharge_record;
+
+select
+    sum(u_money) as total_money
+from
+    (
+        select
+            u_money
+        from
+            loris_character_15010030002.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030004.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030006.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030008.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030010.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030012.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030014.recharge_record
+    ) as total_money;
+
+select
+    sum(u_money)
+from
+    loris_character_15010030002.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030004.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030006.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030008.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030010.recharge_record
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030012.recharge_record;

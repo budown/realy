@@ -1,3 +1,6 @@
+import bisect
+
+
 class Solution:
     def maxProduct(self, nums):
         if not nums:
@@ -89,3 +92,26 @@ class Solution:
                     dfs(grid, i, j)
                     count += 1
         return count
+
+
+class Solution:
+    def search(self, nums, target):
+        i = bisect.bisect_left(nums, target, 0)
+        if i != len(nums) and nums[i] == target:
+            return i
+        else:
+            return -1
+
+    def search2(self, nums, target):
+        left = 0
+        right = len(nums)-1
+        mid = 0
+        while left <= right:
+            mid = left+((right-left) >> 1)
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                left = mid + 1
+            elif nums[mid] > target:
+                right = mid-1
+        return -1

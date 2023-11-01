@@ -42,6 +42,12 @@ from
             u_money
         from
             loris_character_15010030013.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030015.recharge_record
     ) as total_money;
 
 select
@@ -78,6 +84,18 @@ select
     sum(u_money)
 from
     loris_character_15010030011.recharge_record;
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030013.recharge_record;
+union
+all
+select
+    sum(u_money)
+from
+    loris_character_15010030015.recharge_record;
 
 select
     sum(u_money) as total_money
@@ -123,6 +141,12 @@ from
             u_money
         from
             loris_character_15010030014.recharge_record
+        union
+        all
+        select
+            u_money
+        from
+            loris_character_15010030016.recharge_record
     ) as total_money;
 
 select

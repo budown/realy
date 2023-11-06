@@ -115,3 +115,55 @@ class Solution:
             elif nums[mid] > target:
                 right = mid-1
         return -1
+
+
+class Solution:
+    def searchRange(self, nums, target):
+        def search(nums, target):
+            left = 0
+            right = len(nums) - 1
+            while (left <= right):
+                mid = left+((right-left) >> 1)
+                if nums[mid] < target:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+            return left
+
+        first = search(nums, target)
+        if first == len(nums) or nums[first] != target:
+            return [-1, -1]
+        last = search(nums, target+1) - 1
+        return [first, last]
+
+
+# >= target 最左边位置
+def findleft(nums, target):
+    left = 0
+    right = len(nums) - 1
+    mid = 0
+    res = -1
+    while (left <= right):
+        mid = left+((right-left) >> 1)
+        if nums[mid] >= target:
+            # 标记然后往左
+            res = mid
+            right = mid - 1
+        else:
+            left = mid + 1
+    return res
+
+# <= target 最右位置
+def findright(nums, target):
+    left = 0
+    right = len(nums)-1
+    mid = 0
+    res = -1
+    while (left <= right):
+        mid = left+((right-left) >> 1)
+        if nums[mid] <= target:
+            res = mid
+            left = mid + 1
+        else:
+            right = mid - 1
+    return res

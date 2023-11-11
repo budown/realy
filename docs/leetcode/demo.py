@@ -154,6 +154,8 @@ def findleft(nums, target):
     return res
 
 # <= target 最右位置
+
+
 def findright(nums, target):
     left = 0
     right = len(nums)-1
@@ -167,3 +169,104 @@ def findright(nums, target):
         else:
             right = mid - 1
     return res
+
+
+def bubblesort(arr):
+    if not arr or len(arr) < 2:
+        return arr
+    n = len(arr)
+    end = n - 1
+    i = 0
+    while (end > 0):
+        if arr[i] > arr[i+1]:
+            arr[i], arr[i+1] = arr[i+1], arr[i]
+        if i < end - 1:
+            i += 1
+        else:
+            end -= 1
+            i = 0
+    return arr
+
+
+# arr = [5, 4, 3, 2, 1, 0]
+# res = bubblesort(arr)
+# print(res)
+
+class TreeNode:
+    def __init__(self):
+        self.children = {}
+        self.is_end = False
+
+
+class Trie:
+    def __init__(self):
+        self.root = TreeNode()
+
+    def insert(self, word: str):
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                node.children[char] = TreeNode()
+            node = node.children[char]
+        node.is_end = True
+
+    def search(self, word: str):
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                return False
+            node = node.children[char]
+        return node.is_end
+
+    def startsWith(self, prefix: str):
+        node = self.root
+        for char in prefix:
+            if char not in node.children:
+                return False
+            node = node.children[char]
+        return True
+
+
+class Solution:
+    def findKthLargest(self, nums, k):
+        pass
+
+
+class Solution:
+    def maximalSquare(self, matrix):
+        # 行
+        rows = len(matrix)
+        # 列
+        cols = len(matrix[0])
+        dp = [[0]*cols for _ in range(rows)]
+        maxSide = 0
+        for i in range(rows):
+            for j in range(cols):
+                if matrix[i][j] == '1':
+                    if i == 0 or j == 0:
+                        dp[i][j] = 1
+                    else:
+                        dp[i][j] = min(dp[i][j-1], dp[i-1]
+                                       [j], dp[i-1][j-1]) + 1
+                    maxSide = max(maxSide, dp[i][j])
+        return maxSide*maxSide
+
+
+class Solution:
+    def maxSlidingWindow(self, nums, k):
+        pass
+
+
+def func1(x):
+    x = 0
+    print("func1:", x)
+
+
+def func2(x):
+    func1(x)
+    print("func2:", x)
+
+
+x = 10
+
+func2(x)

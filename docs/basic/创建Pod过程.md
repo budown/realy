@@ -1,5 +1,7 @@
 # 创建 Pod 过程
 
+https://github.com/jamiehannaford/what-happens-when-k8s/blob/master/zh-cn/README.md
+
 用户通过命令行创建Pod
 
 kube-apiserver经过对象校验、admission、quota等准入操作，写入etcd

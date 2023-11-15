@@ -1,3 +1,4 @@
+from typing import List
 import bisect
 
 
@@ -257,16 +258,43 @@ class Solution:
         pass
 
 
-def func1(x):
-    x = 0
-    print("func1:", x)
+class Solution:
+    def moveZeroes(self, nums: List(int)):
+        if not nums:
+            return 0
+        count = 0
+        for x in range(len(nums)):
+            if nums[x]:
+                nums[count] = nums[x]
+                count += 1
+
+        for x in range(count, len(nums)):
+            nums[x] = 0
+
+    def moveZeroes2(self, nums):
+        left = 0
+        right = 0
+        while right < len(nums):
+            if nums[right] != 0:
+                nums[left], nums[right] = nums[right], nums[left]
+                left += 1
+            right += 1
 
 
-def func2(x):
-    func1(x)
-    print("func2:", x)
+class Solution:
+    def findDuplicate(self, nums: List(int)) -> int:
+        slow = nums[0]
+        fast = nums[0]
+        while True:
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+            # 第一次相遇
+            if slow == fast:
+                break
 
-
-x = 10
-
-func2(x)
+        # 快的从头开始，再次相遇就是环的地方，也就是重复元素
+        fast = nums[0]
+        while slow != fast:
+            slow = nums[slow]
+            fast = nums[fast]
+        return slow

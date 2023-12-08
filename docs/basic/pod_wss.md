@@ -152,3 +152,5 @@ wss 指标的值更高可能因为 active_file 内存占用更多，所以会出
 而 rss 的指标则更符合大家原本使用 ECS 时代的习惯
 
 可是普遍上我们监控容器内存的使用率还是用 wss/limit 来做
+
+[容器内存监控是选 wss 还是 rss](https://www.jianshu.com/p/36a1df62cda7)

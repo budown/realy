@@ -39,6 +39,7 @@ helloworld
 # Chart.yaml: 用于描述这个 chart 包括名字、描述信息以及版本
 # values.yaml: 用于存储 templates 目录中模板文件中用到的变量
 # NOTES.txt: 用于部署该 chart 后介绍 chart 部署后的一些信息
+# templates: 目录下存放应用一系列 K8S 资源的 yaml 模板
 
 # 打包
 helm package helloworld
@@ -94,4 +95,25 @@ helloworld	default  	3       	2023-12-13 16:42:06.447457 +0800 CST	deployed	hell
 
 # 删除/卸载
 helm uninstall helloworld
+```
+
+```yaml
+# 这三个是必须字段
+apiVersion: v2 # Chart API 版本，必须有
+name: helloworld # Chart 名称，必须有
+version: 0.1.1 # 版本，必须有
+
+# 一下均为可选字段
+description: A Helm chart for Kubernetes #一句话对这个项目的描述
+type: application # Chart 类型
+appVersion: "1.16.0" # 包含的应用版本
+
+# 还有其他可选字段参考官网
+```
+
+```yaml
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: "latest"
 ```

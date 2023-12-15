@@ -1,2 +1,4 @@
 .idea/
+pyvenv/
 node_modules/
+helloworld/

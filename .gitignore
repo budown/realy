@@ -2,3 +2,5 @@
 pyvenv/
 node_modules/
 helloworld/
+mutatingwebhook-ca-bundle.yaml
+validatingwebhook-ca-bundle.yaml
